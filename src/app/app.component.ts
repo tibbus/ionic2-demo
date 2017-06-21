@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { LoginPage } from '../pages/login/login';
-import { MasterListPage } from '../pages/master-list/master-list';
+import { PlanetsPage } from '../pages/planets/planets';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -28,7 +28,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Login', component: LoginPage },
-      { title: 'Master List', component: MasterListPage }
+      { title: 'Master List', component: PlanetsPage }
     ];
   }
 

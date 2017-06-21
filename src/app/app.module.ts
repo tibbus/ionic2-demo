@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { LoginPage } from '../pages/login/login';
 import { DetailPage } from '../pages/detail/detail';
-import { MasterListPage } from '../pages/master-list/master-list';
+import { PlanetsPage } from '../pages/planets/planets';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,10 +16,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     LoginPage,
     DetailPage,
-    MasterListPage
+    PlanetsPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -26,7 +28,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     LoginPage,
     DetailPage,
-    MasterListPage
+    PlanetsPage
   ],
   providers: [
     StatusBar,

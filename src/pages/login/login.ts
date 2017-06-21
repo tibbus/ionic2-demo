@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Nav } from 'ionic-angular';
 
-import { MasterListPage } from '../master-list/master-list';
+import { PlanetsPage } from '../planets/planets';
 
 @Component({
   selector: 'login',
@@ -11,6 +11,6 @@ export class LoginPage {
   constructor(private nav: Nav) { }
 
   clickLogin() {
-    this.nav.setRoot(MasterListPage);
+    this.nav.setRoot(PlanetsPage);
   }
 }
