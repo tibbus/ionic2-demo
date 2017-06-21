@@ -10,17 +10,17 @@ import { PlanetsPage } from '../planets/planets';
 })
 export class MenuPage {
   @Input() nav: Nav;
-  pages: Array<{ title: string, component?: any }>;
+  pages: Array<Page>;
+  loginPage: Page = { title: 'Login', component: LoginPage, icon: 'ios-power' };
 
   constructor(private menu: MenuController) {
-    // set our app's pages
+    // set our app's pages + Login page
     this.pages = [
-      { title: 'Login', component: LoginPage },
-      { title: 'DashBoard' },
-      { title: 'Photos' },
-      { title: 'Avaiable Missions' },
-      { title: 'Planets', component: PlanetsPage },
-      { title: 'Chat' }
+      { title: 'DashBoard', icon: 'ios-albums' },
+      { title: 'Photos', icon: 'ios-images' },
+      { title: 'Avaiable Missions', icon: 'ios-build' },
+      { title: 'Planets', component: PlanetsPage, icon: 'ios-planet' },
+      { title: 'Chat', icon: 'ios-chatbubbles' }
     ];
   }
 
@@ -40,4 +40,10 @@ export class MenuPage {
     // navigate to the new page
     this.nav.setRoot(page.component);
   }
+}
+
+interface Page {
+  title: string,
+  component?: any,
+  icon: string
 }

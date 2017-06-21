@@ -1,3 +1,47 @@
 menu {
+  background-color: #e0e3eb;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
 
+  .logo {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: black;
+  }
+
+  .menu-item {
+    padding-left: 75px;
+    margin-top: 5px;
+    cursor: pointer;
+    background: none;
+
+    &__text {
+      font-size: 17px;
+      margin-left: 15px;
+      display: inline-block;
+      padding: 4px 0;
+    }
+
+    &__icon {
+      position: relative;
+      top: 5px;
+      font-size: 26px;
+      color: #484343;
+    }
+  }
+
+  .login-icon {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: #979797;
+  }
 }
