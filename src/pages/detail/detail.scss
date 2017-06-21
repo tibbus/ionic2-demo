@@ -1,9 +1,39 @@
 detail {
+  margin-bottom: 50px;
+
+  .header {
+    &__title {
+      font-weight: 600;
+      color: #080834;
+    }
+
+    &__icon {
+      color: #0c480c;
+      top: 5px;
+      font-size: 30px;
+      position: relative;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .planet-icon {
+    font-size: 250px;
+    display: block;
+    text-align: center;
+  }
+
+  .card-value {
+    float: right;
+  }
+
   .menu-icon {
-    font-size: 46px;
     position: absolute;
-    bottom: 0;
-    margin: 30px;
+    left: 30px;
+    top: 19px;
+    font-size: 46px;
     cursor: pointer;
   }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-
 import { NavController, NavParams } from 'ionic-angular';
+
+import { Planet } from '../../services/planet.model';
 
 
 @Component({
@@ -8,10 +9,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html'
 })
 export class DetailPage {
-  selectedItem: any;
+  planet: Planet;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+    this.planet = navParams.get('item');
   }
 }

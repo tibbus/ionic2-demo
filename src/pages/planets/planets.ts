@@ -13,7 +13,11 @@ import { Planet } from '../../services/planet.model';
 export class PlanetsPage {
   planets: Planet[] = [];
 
-  constructor(private navCtrl: NavController, private navParams: NavParams, private planetsService: PlanetsService) {
+  constructor(
+    private navCtrl: NavController,
+    private navParams: NavParams,
+    private planetsService: PlanetsService
+  ) {
     this.planetsService.getPlanets().subscribe(planets => this.planets = planets);
   }
 

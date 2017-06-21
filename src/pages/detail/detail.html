@@ -1,20 +1,44 @@
 <ion-header>
   <ion-navbar>
-    <button menuToggle *ngIf="!selectedItem">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Item Details</ion-title>
+    <ion-title>
+      <span>Planet details</span>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <h3 text-center *ngIf="selectedItem">
-    {{selectedItem.title}}
-    <ion-icon [name]="selectedItem.icon"></ion-icon>
-  </h3>
-  <h4 text-center *ngIf="selectedItem">
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </h4>
+  <h1 text-center *ngIf="planet">
+    {{planet.name}}
+  </h1>
+  <ion-icon class="planet-icon" [style.color]="planet.color" name="md-planet"></ion-icon>
+
+  <ion-card>
+    <ion-card-content>Population <span class="card-value">{{planet.population}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Climate <span class="card-value">{{planet.climate}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Diameter <span class="card-value">{{planet.diameter}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Gravity <span class="card-value">{{planet.gravity}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Orbital Period <span class="card-value">{{planet.orbital_period}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Rotation Period <span class="card-value">{{planet.rotation_period}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Surface Water <span class="card-value">{{planet.surface_water}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Terrain <span class="card-value">{{planet.terrain}}</span></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>Website <a class="card-value" href="{{planet.url}}">{{planet.url}}</a></ion-card-content>
+  </ion-card>
 
   <ion-icon class="menu-icon icon ion-md-menu" menuToggle></ion-icon>
 </ion-content>

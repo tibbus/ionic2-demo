@@ -5,12 +5,13 @@ export interface Planet {
   diameter: number,
   climate: string,
   gravity: string,
-  terrain: string
+  terrain: string,
   surface_water: number,
   population: number,
   residents: string[],
   films: string[],
   created: string,
   edited: string,
-  url: string
+  url: string,
+  color: string
 }
