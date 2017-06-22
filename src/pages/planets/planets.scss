@@ -1,3 +1,20 @@
 planets {
+  .planet-icon {
+    font-size: 60px;
+  }
 
+  .planet-name {
+    position: relative;
+    top: -17px;
+    margin-left: 15px;
+  }
+
+  .planet-note {
+    text-align: right;
+
+    &__population {
+      font-size: 11px;
+      color: #765757;
+    }
+  }
 }
