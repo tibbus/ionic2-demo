@@ -36,4 +36,29 @@ detail {
     font-size: 46px;
     cursor: pointer;
   }
+
+  .like {
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 7px;
+    cursor: pointer;
+    padding: 10px;
+
+    &__icon {
+      color: lightgrey;
+      font-size: 30px;
+
+      &--up {
+        color: black;
+      }
+    }
+
+    &__count {
+      font-size: 18px;
+      margin-left: 6px;
+      position: relative;
+      top: -2px;
+    }
+  }
 }

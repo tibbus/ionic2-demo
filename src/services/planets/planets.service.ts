@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 
 import { Planet } from './planet.model';
 
+
 @Injectable()
 export class PlanetsService {
   constructor(private http: Http) { }
@@ -11,10 +12,12 @@ export class PlanetsService {
   public getPlanets() {
     return this.http.get('http://swapi.co/api/planets/').map(data => {
       const planetsList: Planet[] = data.json().results;
+      let id = 0;
 
-      // Add a random color to each planet
+      // Add `color` and `id` to each planet
       return planetsList.map((planet: Planet) => {
         planet.color = this.getRandomColor();
+        planet.id = id++;
 
         return planet;
       });

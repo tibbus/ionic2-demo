@@ -1,20 +1,41 @@
 planets {
-  .planet-icon {
-    font-size: 60px;
+
+  .title {
+    cursor: pointer;
+
+    &__icon {
+      font-size: 60px;
+    }
+
+    &__name {
+      position: relative;
+      top: -17px;
+      margin-left: 15px;
+    }
   }
 
-  .planet-name {
-    position: relative;
-    top: -17px;
-    margin-left: 15px;
-  }
-
-  .planet-note {
+  .note {
     text-align: right;
 
     &__population {
       font-size: 11px;
       color: #765757;
+    }
+
+    &__likes-icon {
+      color: lightgrey;
+      cursor: pointer;
+      margin-right: 5px;
+
+      &--up {
+        color: black;
+      }
+    }
+
+    &__likes-count {
+      top: -2px;
+      position: relative;
+      font-size: 11px;
     }
   }
 }

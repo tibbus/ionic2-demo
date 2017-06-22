@@ -9,13 +9,19 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let planet of planets" (click)="itemTapped($event, planet)">
-      <ion-icon class="planet-icon" [style.color]="planet.color" name="md-planet"></ion-icon>
-      <span class="planet-name">{{planet.name}}</span>
-      <div class="planet-note" item-right>
-        <div>{{planet.population}}</div>
-        <div class="planet-note__population">population</div>
+    <div ion-item *ngFor="let planet of planets">
+      <div class="title" (click)="clickPlanet($event, planet)">
+        <ion-icon class="title__icon" [style.color]="planet.color" name="md-planet"></ion-icon>
+        <span class="title__name">{{planet.name}}</span>
       </div>
-    </button>
+      <div class="note" item-right>
+        <div>{{planet.population}}</div>
+        <div class="note__population">population</div>
+        <div (click)="clickLike(planet.id)">
+          <ion-icon class="note__likes-icon" [class.note__likes-icon--up]="likes[planet.id]" name="ios-thumbs-up"></ion-icon>
+          <span class="note__likes-count">{{likes[planet.id] || 0}}</span>
+        </div>
+      </div>
+    </div>
   </ion-list>
 </ion-content>

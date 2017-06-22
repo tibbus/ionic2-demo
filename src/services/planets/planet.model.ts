@@ -13,5 +13,6 @@ export interface Planet {
   created: string,
   edited: string,
   url: string,
-  color: string
+  color: string,
+  id: number
 }

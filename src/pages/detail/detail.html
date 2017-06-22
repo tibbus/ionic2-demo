@@ -12,6 +12,11 @@
   </h1>
   <ion-icon class="planet-icon" [style.color]="planet.color" name="md-planet"></ion-icon>
 
+  <div class="like" (click)="clickLike()">
+    <ion-icon class="like__icon" [class.like__icon--up]="like" name="ios-thumbs-up"></ion-icon>
+    <span class="like__count">{{like || 0}}</span>
+  </div>
+
   <ion-card>
     <ion-card-content>Population <span class="card-value">{{planet.population}}</span></ion-card-content>
   </ion-card>
