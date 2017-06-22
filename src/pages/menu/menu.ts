@@ -4,6 +4,7 @@ import { Nav, MenuController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { PlanetsPage } from '../planets/planets';
 
+
 @Component({
   selector: 'menu',
   templateUrl: 'menu.html'

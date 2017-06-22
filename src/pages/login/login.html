@@ -4,19 +4,20 @@
     <div class="title">Sign In</div>
 
     <div class="input">
-      <input class="input__text" placeholder="E-mail" type="text" />
+      <input class="input__text" placeholder="E-mail" type="text" #email />
       <ion-icon class="input__icon" name="ios-mail-outline"></ion-icon>
     </div>
     <div class="input">
-      <input class="input__text" placeholder="Password" type="password" />
+      <input class="input__text" placeholder="Password" type="password" #password />
       <ion-icon class="input__icon input__icon--lock" name="ios-lock-outline"></ion-icon>
     </div>
-
     <div class="forgot-password">forgot password?</div>
+
+    <div class="error">{{errorMessage}}</div>
 
     <div class="buttons">
       <button class="buttons__login" ion-button color="light">Sign Up</button>
-      <button class="buttons__login" ion-button color="dark" (click)="clickLogin()">Sign In</button>
+      <button class="buttons__login" ion-button color="dark" (click)="clickLogin(email.value, password.value)">Sign In</button>
     </div>
   </div>
 

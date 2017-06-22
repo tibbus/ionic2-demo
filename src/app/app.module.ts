@@ -13,6 +13,7 @@ import { LikesService } from '../services/likes/likes.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 @NgModule({
   declarations: [
     MyApp,
